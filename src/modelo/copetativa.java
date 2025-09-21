@@ -1,5 +1,5 @@
 package modelo;
 
-public class copetativa {
+public class Copetativa {
     
 }
