@@ -1,15 +1,19 @@
 package transacciones;
 
-public class deposito implements transaccion {
+import modelo.Cuenta;
+
+public class Deposito implements Transaccion {
+    private Cuenta cuenta;
     private double monto;
 
-    public deposito(double monto) {
+    public Deposito(Cuenta cuenta, double monto) {
+        this.cuenta = cuenta;
         this.monto = monto;
     }
 
     @Override
     public void ejecutar() {
-        System.out.println("Deposito realizado por: $" + monto);
+        cuenta.depositar(monto);
     }
 
     @Override

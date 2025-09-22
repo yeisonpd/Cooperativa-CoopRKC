@@ -31,7 +31,7 @@ public class Socio {
 
     //setters
 
-    public void agregarCuneta(Cuenta cuenta)throws Exception{
+    public void agregarCuenta(Cuenta cuenta)throws Exception{
         boolean existe = cuentas.stream()//covertimos la lista de cuneta en un flujo de datos secuencial 
         .anyMatch(c -> c.getNumeroCuenta().equals(cuenta.getNumeroCuenta())); // recorremos y comprobamos si algun elemento cumple la condicion, para ello usamos una expresion lambda
 

@@ -1,15 +1,19 @@
 package transacciones;
 
-public class retiro implements transaccion{
+import modelo.Cuenta;
+
+public class Retiro implements Transaccion{
+    private Cuenta cuenta;
     private double monto;
 
-    public retiro(double monto) {
+    public Retiro(Cuenta cuenta, double monto) {
+        this.cuenta = cuenta;
         this.monto = monto;
     }
 
     @Override
-    public void ejecutar() {
-        System.out.println("Retiro realizado por: $" + monto);
+    public void ejecutar() throws Exception {
+        cuenta.retirar(monto);
     }
 
     @Override
