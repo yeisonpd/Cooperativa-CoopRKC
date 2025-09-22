@@ -1,6 +1,6 @@
 package transacciones;
 
-public interface Transaccion {
-    void ejecutar() throws Exception;
-    double getMonto();
+public interface transaccion {
+    void ejecutar() ; //Ejecutar la operación
+    double getMonto(); //Devolver el monto de la transacción 
 }
